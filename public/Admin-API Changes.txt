@@ -1,0 +1,39 @@
+Payment details to be stored -- this is for storing service level details. 
+
+For Eg: Employee opts for verification of address, then UI will trigger the wallet api to pay and upon recieving the successful response, UI should call
+this API so that the service level transaction is stored in the back end
+--------------------------------
+METHOD: POST
+
+http://192.168.1.230:9000/api/v1/accounts/paymentDetails?service=Jobverification&trxId=ABCDEF1234&paymentMethod=CARD&amount=100
+
+
+=================================================================================
+Revenue API for admin--------------500 error
+-----------------------
+http://192.168.1.230:9000/serviceRevenue?ontracId=all&Srvtype=all----------------add filter
+
+=================================================================================
+get wallet transaction details for a given ontracId from admin-------------404 error
+add transaction api for employerlist api------------------------------------------------------------done
+
+http://3.22.17.212:9000/wallet/accTransactions?sdate=2020-07-01&edate=2020-08-11&ontracId=<OID-COMP>
+=================================================================================
+
+
+============================================================================
+Modifying the employer validity date -- this works for only employer-done
+	use smae api----------------------------------------todo------gave to jeevan
+	filter for added admin and caterogy filter------------------working
+	
+http://192.168.1.230:9000/modifyValidityDate?ontracId=OID-COMP-00000016&date=2020-09-30
+
+
+{
+    "NewValidateDate": "2020-09-30"	
+}
+getmyprofile--------------------500 error
+=============================================================================
+http://192.168.1.230:9000/getAdminList
+list admins api get-----------------------------------done
+======================================================

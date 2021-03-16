@@ -1,0 +1,94 @@
+Register API --http://192.168.1.230:9000/api/v1/accounts/auth/employee/register
+----------------
+req-body
+-------
+{
+	"firstname": "bed21223",
+	"middlename": "bed22123",
+	"surname": "bed21213",
+	"username": "bed21214",
+	"email": "bed222348@gmail.com",
+	"dob": "1983-12-20",
+	"sex" : "Male",
+	"password":"1234",
+	"phone": "123456789"
+}
+
+REsponse
+----------
+{
+    "user": {
+        "id": 13,
+        "ontrac_id": "WQPGE2",
+        "firstname": "bed21223",
+        "middlename": "bed22123",
+        "surname": "bed21213",
+        "username": "bed21214",
+        "email": "bed222348@gmail.com",
+        "is_admin": false,
+        "is_employer": false,
+        "accountStatus": "Profile In Progress",
+        "dob": "1983-12-20",
+        "sex": "Male",
+        "phone": "123456789",
+        "info_provided_field": {
+            "profile": false,
+            "address": false,
+            "phone": false,
+            "identity": false,
+            "jobHistory": false,
+            "academics": false
+        }
+    },
+    "token": "8f185577024f50c8458e047954a6741c9338fbe18d93b9b229b2169a0c378aa8"
+}
+====================================================================================
+Employer register API
+---------------------
+http://192.168.1.230:9000/api/v1/accounts/auth/employer/register
+
+{
+	"firstname": "test2112111",
+	"middlename": "test1212111",
+	"surname": "test211211",
+	"username": "test211310",
+	"email": "tes13021111@er2.com",
+	"password":"1234",
+	"companyName":"company_er6",
+	"rcnum": "5555",
+	"phone": "9854313456",
+	"staffCnt":"11-15"
+}
+
+staffCnt can have following values :['1-5', '6-10','11-15','16-50','Above 50']
+------------------------------------
+REsponse
+-----------
+{
+    "user": {
+        "id": 23,
+        "ontrac_id": "M35N5V",
+        "firstname": "test211291921",
+        "middlename": "test121991121",
+        "surname": "test2112091",
+        "username": "test2092910",
+        "email": "tes1311291@er2.com",
+        "is_admin": false,
+        "is_employer": true,
+        "accountStatus": "Profile In Progress",
+        "company_name_field": "company_er7",
+        "phone": null,
+        "subscriptionValidityDate": "2020-09-28",
+        "info_provided_field": {
+         "Staff Count": "11-15"
+        }
+    },
+    "token": "83e9298b5841cf652fdf7670d759141533efc89ef6b043ea51c30116097493aa"
+}
+==========================================================================
+Employee Identity API changes
+
+please add 'issueDate' and 'expDate' parameters as regular Date format.
+
+these are mandatory fields.
+========================================================================

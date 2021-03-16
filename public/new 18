@@ -1,0 +1,17 @@
+<List component="div" disablePadding>
+<ListItemIcon>
+              <CodeIcon style={{ color: "white" }} />
+            </ListItemIcon>
+              <Link to="/employeeEmployementCodes" className={classes.link}>
+                <ListItem
+                  button
+                  className={classes.nested}
+                  // onClick={() => handleDrawerClose()}
+                >
+                  <ListItemText
+                    primary="Code Requests"
+                    className={classes.textColor}
+                  />
+                </ListItem>
+              </Link>
+            </List>
